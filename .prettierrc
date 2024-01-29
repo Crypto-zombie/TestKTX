@@ -1,0 +1,8 @@
+{
+    "endOfLine": "lf",
+    "plugins": ["prettier-plugin-tailwindcss"],
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "tailwindFunctions": ["classNames"]
+  }
+  

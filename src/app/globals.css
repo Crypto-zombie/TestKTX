@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.customScrollBar {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 2px;
+  }
+    /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0D0D13; 
+  }
+
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #57576b;
+    width: 0; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #28283a; 
+  }
+}
+
+
+
+body {
+  font-family: var(--font-alice);
+  background-color: #000000;
+}
+
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.gradiantButton {
+  background: linear-gradient(285.06deg, #A66E4B 23.12%, #BA7F5B 37.96%, #A66E4B 39.75%, #BD8460 51.03%, #A66E4B 52.22%);
+}
+.gradiantButton:hover {
+  background: linear-gradient(285.06deg, #A66E4B 23.12%, #BA7F5B 37.96%, #A66E4B 39.75%, #BD8460 51.03%, #A66E4B 52.22%);
+  box-shadow: 0px 3px 0px #21191A, inset 0px 0px 25px #FFDAC4;
+}
