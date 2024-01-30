@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import useKTX2 from '@/componentsforThree/UseKTX2';
+import { CompressedTexture } from 'three';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { memo } from 'react';
-import { useGLTF, useKTX2 } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 
 type Props = {
   pos?: Array<number>;
@@ -16,7 +17,7 @@ const Model = ({ pos = [0.071, -0.41, -1.642] }: Props) => {
   const [diffuseMaterial, normalMaterial] = useKTX2([
     '/part1/Part1_Diffuse.ktx2',
     '/part1/Part1_Normal.ktx2',
-  ]);
+  ]) as CompressedTexture[];
   return (
     <group
       dispose={null}
@@ -38,4 +39,4 @@ const Model = ({ pos = [0.071, -0.41, -1.642] }: Props) => {
   );
 };
 
-export default memo(Model);
+export default Model;

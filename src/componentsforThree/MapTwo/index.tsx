@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import useKTX2 from '@/componentsforThree/UseKTX2';
 import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader.js';
-// import { TextureLoader } from 'three';
-import { memo } from 'react';
-import { useGLTF, useKTX2 } from '@react-three/drei';
-// import { useLoader } from '@react-three/fiber';
+
+import { CompressedTexture } from 'three';
+import { useGLTF } from '@react-three/drei';
 
 type Props = {
   pos?: Array<number>;
@@ -20,7 +20,7 @@ const MapTwo = ({ pos = [0.071, -0.41, -1.642] }: Props) => {
     '/part2/Part2_diffuse.ktx2',
     '/part2/Part2_roughness.ktx2',
     '/part2/Part2_normal.ktx2',
-  ]);
+  ]) as CompressedTexture[];
   return (
     <group
       dispose={null}
@@ -44,4 +44,4 @@ const MapTwo = ({ pos = [0.071, -0.41, -1.642] }: Props) => {
   );
 };
 
-export default memo(MapTwo);
+export default MapTwo;
